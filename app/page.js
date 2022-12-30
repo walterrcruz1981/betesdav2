@@ -1,5 +1,7 @@
+import styles from './home.module.scss'
+
 export default function HomePage() {
     return (
-        <div>This is the home page verdad</div>
+        <div className={styles.homeContainer}>This is the home page verdad</div>
     )
 }
