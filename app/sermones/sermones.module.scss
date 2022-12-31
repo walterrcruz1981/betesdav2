@@ -77,7 +77,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
     margin: 1.6em 0;
-    overscroll-behavior-block: auto;
 
     .suggestionCard {
         position: relative;

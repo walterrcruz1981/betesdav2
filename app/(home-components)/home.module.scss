@@ -1,0 +1,52 @@
+.homeContainer {
+    max-width: 1600px;
+    margin: 1em auto;
+    padding: 0 1em;
+
+    .cardsContainer {
+        margin: 1em 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1em;
+    }
+}
+
+//slideshoow
+.slide {
+    height: 45em;
+    background-color: red;
+    border-radius: 20px;
+    min-width: 300px;
+
+    button {
+        transform: translate(150%, 500px);
+    }
+
+    @media(max-width: 900px) {
+        height: 20em;
+
+        button {
+            transform: translate(-5em, 150px);
+        }
+    }
+}
+
+//card 
+.card {
+    background-color: blue;
+    height: 20em;
+    border-radius: 20px;
+
+    .content {
+        transform: translate(60px, 175px);
+    }
+
+    @media(max-width: 900px) {
+        height: 13em;
+
+        .content {
+            transform: translate(10px, 75px);
+        }
+    }
+
+}

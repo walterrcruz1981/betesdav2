@@ -1,0 +1,114 @@
+//styles for Many Info Tab
+.infotabContainer {
+    width: 70%;
+    margin: 0 auto;
+    flex-direction: column;
+
+    .titleContainer {
+        width: 100%;
+        background-color: aliceblue;
+        overflow: hidden;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .activeValor {
+        color: blueviolet;
+        font-weight: 900;
+    }
+
+    .title {
+        color: #103a52;
+        padding: 1em 1em;
+        margin: 2px;
+        font-size: 1em;
+
+        &:hover {
+            color: #756969ac;
+        }
+
+        cursor: pointer;
+    }
+
+    .description {
+        background-color: transparent;
+        padding: 2em 3em;
+        line-height: 1.4em;
+    }
+
+    @media (max-width:1200px) {
+        width: 100%;
+
+        .description {
+            padding: .6em 1em;
+        }
+
+        .titleContainer {
+            .title {
+                font-size: .8em;
+                padding: .5em .5em;
+            }
+        }
+    }
+}
+
+// styles for Tab
+.tabContainer {
+    min-height: 25em;
+    margin: 2em 0;
+
+    .choices {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #adadad;
+        color: white;
+        text-align: center;
+        gap: 1em;
+        padding-right: 1em;
+        cursor: pointer;
+
+        h3 {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .active {
+        background-color: rgb(255, 255, 255);
+
+        padding: 1em;
+        color: #0a0a0a;
+    }
+
+    .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        min-height: 25em;
+        margin: 1em auto;
+        padding: 1em;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.185);
+        line-height: 1.2em;
+    }
+
+    @media (max-width: 700px) {
+        .choices {
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+
+            .active {
+                padding: .4em;
+            }
+        }
+
+        .description {
+            width: 100%;
+        }
+    }
+}
