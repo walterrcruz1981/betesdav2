@@ -16,7 +16,7 @@ export default async function Sermones() {
                 const videoCount = contentDetails.itemCount
                 return <div key={id}>
                     <hr />
-                    <h1>{snippet.title} <span>{videoCount}{videoCount < 2 ? ' video' : ' videos'}</span></h1>
+                    <h1>{snippet.title}<br></br> <span>{videoCount}{videoCount < 2 ? ' video' : ' videos'}</span></h1>
                     <Videos playListId={id} />
                 </div>
             })}

@@ -9,6 +9,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'i.ytimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'dih6tqxrn8ffv.cloudfront.net'
       }
     ]
   }
