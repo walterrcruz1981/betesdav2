@@ -1,4 +1,4 @@
-import styles from './Component.module.scss'
+import styles from './component.module.scss'
 const domain = 'https://dih6tqxrn8ffv.cloudfront.net/'
 
 const Modal = ({ open, closeModal, videoInfo }) => {

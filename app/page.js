@@ -1,6 +1,6 @@
-import styles from './home.module.scss'
-import SlideShow from './SlideShow'
-import Card from './Card'
+import styles from './(home-components)/home.module.scss'
+import SlideShow from './(home-components)/SlideShow'
+import Card from './(home-components)/Card'
 
 export default function HomePage() {
     return (

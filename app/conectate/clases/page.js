@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './clases.module.scss'
 import Tab from '../../components/tabs/Tab'
 import { classInfo, introText } from './classContent'
-import { MyImage } from '../../variables'
 import Suggestions from '../../components/Suggestions'
 import desImage from '../../../public/images/assets/02.png'
+import Image from 'next/image'
 
 function Clases() {
 
@@ -15,12 +15,10 @@ function Clases() {
                 <h1>Clases de desarrollo</h1>
             </div>
             <div className={styles.headerImage}>
-                {MyImage(headerImage)}
+                <Image src={headerImage} width={400} height={300} alt={introText.title} priority />
             </div>
-            <div className={styles.proposito + ' flex-center'}>
-                <div className={styles.image}>
-                    {MyImage(desImage)}
-                </div>
+            <div className={styles.proposito}>
+                <Image src={desImage} width={400} height={400} alt={introText.title} />
                 <div className={styles.textContent}>
                     <h1>{introText.title}</h1>
                     <p className={styles.description}>{introText.description}</p>
