@@ -78,7 +78,6 @@
 
     .active {
         background-color: rgb(255, 255, 255);
-
         padding: 1em;
         color: #0a0a0a;
     }
@@ -88,12 +87,13 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        min-height: 25em;
+        min-height: 20em;
         margin: 1em auto;
         padding: 1em;
         overflow: hidden;
-        background-color: rgba(0, 0, 0, 0.185);
-        line-height: 1.2em;
+        line-height: 1.4em;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
     }
 
     @media (max-width: 700px) {

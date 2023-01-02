@@ -1,8 +1,8 @@
 
 import { Media as content } from '../ministeriosContent'
 import styles from './media.module.scss'
-import { MyImage } from '../../variables';
 import Suggestions from '../../components/Suggestions';
+import Image from 'next/image';
 
 function Media() {
     const domain = 'https://dih6tqxrn8ffv.cloudfront.net/'
@@ -32,7 +32,7 @@ function Media() {
                 {content.duties?.map((duty, index) => (
                     <div className={styles.cards} key={index}>
                         <h2>{duty.title}</h2>
-                        {MyImage(domain + duty.image)}
+                        <Image src={domain + duty.image} width={300} height={300} alt={duty.title} />
                     </div>
                 ))}
             </div>
