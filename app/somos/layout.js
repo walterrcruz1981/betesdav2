@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <div className={styles.somosContainer}>
       <div className={styles.hero}>
-        <Image src={heroImage} width={400} height={300} alt='somos page hero image' priority />
+        <Image src={heroImage} width={1000} height={500} alt='somos page hero image' priority />
       </div>
       <div className={styles.main}>
         <div className={styles.headerText}>

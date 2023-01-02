@@ -1,11 +1,11 @@
 export const gruposInfo = {
     title: 'Grupos Pequeños',
-    description: <p>
+    description: <>
         Nuestros Grupos Pequeños fueron diseñados para proporcionar el crecimiento continuo y permanente de nuestros miembros. Y están basados en el trabajo de individuos inspirados,
         entrenados y equipados para el discipulado.<br></br><br></br>
         Como iglesia seguimos comprometidos con la meta de ver los 5 propósitos bíblicos cada vez más arraigados en la iglesia, en los grupos grandes,
         en los grupos pequeños y en cada vida individual.
-    </p>,
+    </>,
     imageUrl: 'https://images.unsplash.com/photo-1609234656388-0ff363383899?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80'
 }
 

@@ -13,7 +13,7 @@ function Tab({ content }) {
             </div>
             <div className={styles.description}>
                 {content?.map((description, index) => (
-                    <div key={index}>{index === active ? description.description : ''}</div>
+                    <p key={index}>{index === active ? description.description : ''}</p>
                 ))}
             </div>
         </div >
