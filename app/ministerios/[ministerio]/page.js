@@ -1,15 +1,18 @@
 
-import { Media as content } from '../ministeriosContent'
-import styles from './media.module.scss'
+import { ministerios } from '../ministeriosContent'
+import styles from './ministerio.module.scss'
 import Suggestions from '../../components/Suggestions';
 import Image from 'next/image';
+import heroImage from '../../../public/images/hero/ministerios.webp'
 
-function Media() {
+function Ministerio({ params: { ministerio } }) {
+    const content = ministerios.find(content => content.slug === ministerio)
     const domain = 'https://dih6tqxrn8ffv.cloudfront.net/'
-    const video = 'mediaVideo.mp4'
-    const heroImage = 'https://images.unsplash.com/photo-1612043071344-94c20c4c837e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80';
     return (
-        <div className={styles.mediaContainer + ' flex-center-column'}>
+        <div className={styles.mediaContainer}>
+
+            <Image src={heroImage} alt='media hero image' priority />
+
             <div className={styles.heroText}>
                 <h1>{content.title}</h1>
                 <p>{content.intro}</p>
@@ -26,7 +29,7 @@ function Media() {
             </div>
             <div className={styles.videoContainer}>
                 <h1>¿Que Hacemos?</h1>
-                <video autoPlay muted src={domain + video}></video>
+                <video autoPlay muted src={domain + content.video}></video>
             </div>
             <div className={styles.cardsContainer}>
                 {content.duties?.map((duty, index) => (
@@ -41,4 +44,4 @@ function Media() {
     )
 }
 
-export default Media
+export default Ministerio

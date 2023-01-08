@@ -1,4 +1,4 @@
-import image1 from '../../../public/images/pastores/pastorRonald.jpeg'
+import image1 from '../../../public/images/pastores/pastorRonald.webp'
 import image2 from '../../../public/images/pastores/pastorRonaldFamilia1.jpeg'
 import image3 from '../../../public/images/pastores/pastorRonaldFamilia2.jpeg'
 import Image from 'next/image'

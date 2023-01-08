@@ -1,9 +1,9 @@
 import styles from './somos.module.scss'
-import heroImage from '../../public/images/assets/entry.png'
+import heroImage from '../../public/images/hero/somos.webp'
 import Image from 'next/image'
 import { somos } from './somosContent'
 import Link from 'next/link'
-import pastor from '../../public/images/pastores/pastorRonald.jpeg'
+import pastor from '../../public/images/pastores/pastorRonald.webp'
 
 export default function RootLayout({ children }) {
   return (
