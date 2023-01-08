@@ -43,3 +43,26 @@
         transform: scale(.8);
     }
 }
+
+//Connect Links
+.connectLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    .link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 3em 0;
+
+        h1 {
+            font-size: 3em;
+        }
+
+        &:hover {
+            color: rgb(131, 172, 169);
+        }
+    }
+}

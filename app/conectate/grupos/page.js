@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './grupos.module.scss'
 import { gruposInfo, gruposDescription } from './gruposContent'
-import { MyImage } from '../../variables'
+import heroImage from '../../../public/images/hero/grupos.webp'
 import Tab from '../../components/tabs/Tab'
 import Suggestions from '../../components/Suggestions'
 import Image from 'next/image'
@@ -10,7 +10,7 @@ function GruposPequenos() {
     return (
         <div className={styles.gruposContainer}>
             <div className={styles.heroImage}>
-                <Image width={500} height={300} src={gruposInfo.imageUrl} alt={gruposInfo.title} priority />
+                <Image width={500} height={300} src={heroImage} alt={gruposInfo.title} priority />
             </div>
             <div className={styles.introText}>
                 <h1>{gruposInfo.title}</h1>

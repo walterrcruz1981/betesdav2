@@ -7,6 +7,7 @@ function Links() {
             <Link href={'/'}>Home</Link>
             <Link href={'/somos'}>Somos</Link>
             <Link href={'/sermones'}>Sermones</Link>
+            <Link href={'/contacto'}>Contacto</Link>
         </div>
     )
 }

@@ -7,7 +7,7 @@ function Suggestions() {
         <div className={styles.suggestionsContainer}>
             <h3>Sugerencias</h3>
             <div className={styles.linksContainer}>
-                <Link href={'/ministerios/media'}>Media</Link>
+                <Link href={'/ministerios/betesda-media'}>Media</Link>
                 <Link href={'/somos/pastorronald'}>Pastor Ronald</Link>
                 <Link href={'/conectate/clases'}>Clases</Link>
                 <Link href={'/conectate/grupos'}>Grupos Pequeños</Link>

@@ -7,11 +7,11 @@ function LinkCard({ content }) {
     return (
         <div style={{ height: content.height }} className={styles.linkCardContainer + ' box-shadow'}>
 
-            <Image src={content.imageUrl} width={300} height={150} alt={content.title} />
+            <Image src={content.image} width={300} height={150} alt={content.title} />
             <div className={styles.cardContent + ' flex-center-column'}>
                 <h3>{content.subTitle}</h3>
                 <h1>{content.title}</h1>
-                <Link href={content.buttonLink}>{content.buttonText}</Link>
+                <Link href={content.url}>{content.buttonText}</Link>
             </div>
         </div>
     )

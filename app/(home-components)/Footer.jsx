@@ -3,6 +3,8 @@ import styles from './home.module.scss'
 import logo from '../../public/images/logo/logo2.png'
 import Links from './Links'
 import Image from 'next/image'
+import { socialLinks } from './socialContent'
+import ConnectLinks from '../components/features/ConnectLinks'
 
 function Footer() {
     return (
@@ -11,6 +13,9 @@ function Footer() {
                 <Image src={logo} width={75} height={75} alt='footer logo' />
             </div>
             <Links />
+            <div className={styles.socialLinks}>
+                <ConnectLinks links={socialLinks} />
+            </div>
         </div>
     )
 }

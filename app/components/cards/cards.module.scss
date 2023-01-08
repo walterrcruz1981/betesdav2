@@ -57,3 +57,31 @@
     }
 
 }
+
+//simple card
+.simpleCardContainer {
+    margin: 1em 0;
+    border-radius: 9px;
+    overflow: hidden;
+    text-align: center;
+    outline: 1px solid black;
+
+    .image {
+        overflow: hidden;
+        background-color: black;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            z-index: -1;
+
+            &:hover {
+                filter: sepia(.2);
+                transform: scale(1.1);
+                transition: all ease-in-out 500ms;
+            }
+        }
+    }
+
+
+}
