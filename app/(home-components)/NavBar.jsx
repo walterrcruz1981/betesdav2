@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './home.module.scss'
-import { MyImage } from '../variables'
 import logo from '../../public/images/logo/logo.png'
 import Links from './Links'
 import Link from 'next/link'

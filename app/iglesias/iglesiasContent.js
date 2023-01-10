@@ -1,13 +1,13 @@
 import { HiOutlineChatBubbleLeftEllipsis, HiPhoneArrowUpRight, HiEnvelope } from 'react-icons/hi2'
 
 
-const elSalvadorFlag = '/../public/images/flags/elSalvadorFlag.png'
-const usaFlag = '/../public/images/flags/usaFlag.png'
-const mexicoFlag = '/../public/images/flags/mexicoFlag.png'
-const pastorSalinaCruz = '/../public/images/pastores/pastorjoel-salinas-cruz.webp'
-const pastorTehuantepec = '/../public/images/pastores/pastorJuanCarlos.webp'
-const pastorApopa = '/../public/images/pastores/pastorApopa.webp'
-const pastorRonald = '/../public/images/pastores/pastorRonald.webp'
+import elSalvadorFlag from '../../public/images/flags/elSalvadorFlag.png'
+import usaFlag from '../../public/images/flags/usaFlag.png'
+import mexicoFlag from '../../public/images/flags/mexicoFlag.png'
+import pastorSalinaCruz from '../../public/images/pastores/pastorjoel-salinas-cruz.webp'
+import pastorTehuantepec from '../../public/images/pastores/pastorJuanCarlos.webp'
+import pastorApopa from '../../public/images/pastores/pastorApopa.webp'
+import pastorRonald from '../../public/images/pastores/pastorRonald.webp'
 
 export const iglesiasInfo = [
     {

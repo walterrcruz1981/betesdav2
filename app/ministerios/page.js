@@ -2,15 +2,16 @@ import Image from 'next/image'
 import styles from './ministerios.module.scss'
 import Link from 'next/link'
 import { ministerios } from './ministeriosContent'
+import heroImage from '../../public/images/hero/ministerios.png'
 function Ministerios() {
-    const heroImage = 'https://images.unsplash.com/photo-1517837016564-bfc3ffd67455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80'
     return (
 
         <div className={styles.ministeriosContainer}>
             <div className={styles.hero}>
                 <Image height={800} width={1000} src={heroImage} priority alt='ministerios hero image' />
+                <h1>Lista de Ministerios</h1>
             </div>
-            <h1>Lista de Ministerios</h1>
+
             <div className={styles.cardsContainer}>
                 {ministerios.map((ministerio, index) => (
                     <div key={index} className={styles.card}>

@@ -7,13 +7,13 @@ export default function SlideShow() {
     return (
         <Splide options={{ arrows: false, gap: 10 }}>
             <SplideSlide className={styles.slide}>
-                <button className='primary-button'>helllo</button>
+                <button className='primary-button'>slide  uno</button>
             </SplideSlide >
             <SplideSlide className={styles.slide}>
-                <button className='primary-button'>helllo</button>
+                <button className='primary-button'>sliide dos</button>
             </SplideSlide>
             <SplideSlide className={styles.slide}>
-                <button className='primary-button'>helllo</button>
+                <button className='primary-button'>slide tres</button>
             </SplideSlide>
 
         </Splide>

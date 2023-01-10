@@ -1,19 +1,22 @@
 import styles from './(home-components)/home.module.scss'
 import SlideShow from './(home-components)/SlideShow'
 import Card from './(home-components)/Card'
+import { cardContent } from './(home-components)/homePageContent'
+
 
 export default function HomePage() {
+    const [misiones, planPeace, conectate, ministerios, conocenos] = cardContent
     return (
         <div className={styles.homeContainer}>
             <SlideShow />
             <div className={styles.cardsContainer}>
-                <Card />
-                <Card />
+                <Card content={misiones} />
+                <Card content={planPeace} />
             </div>
             <div className={styles.cardsContainer}>
-                <Card />
-                <Card />
-                <Card />
+                <Card content={conectate} />
+                <Card content={ministerios} />
+                <Card content={conocenos} />
             </div>
         </div>
     )
