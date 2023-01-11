@@ -3,6 +3,7 @@ import { iglesiasInfo } from "../iglesiasContent"
 import ConnectLinks from '../../components/features/ConnectLinks'
 import styles from './iglesiaDescription.module.scss'
 import Image from "next/image"
+import WhatsUpBug from "../../components/features/WhatsUpBug"
 
 export default function IglesiaDescription({ params: { iglesia } }) {
     const church = iglesiasInfo.find(info => info.slug === iglesia)
@@ -30,7 +31,9 @@ export default function IglesiaDescription({ params: { iglesia } }) {
                     <h2>Vision</h2>
                     <p>{church.vision}</p>
                 </div>
+                <h1>Otras Iglesias</h1>
             </div>
+
             <div className={styles.linksContainer}>
                 {otherChurches.map(church => (
                     <Link key={church.id} href={'/iglesias/' + church.slug}>
@@ -39,7 +42,7 @@ export default function IglesiaDescription({ params: { iglesia } }) {
                     </Link>
                 ))}
             </div>
-            <Link href={'/iglesias'}>Mas Iglesias</Link>
+            <WhatsUpBug url={church.whatsupUrl} />
         </div>
     )
 }

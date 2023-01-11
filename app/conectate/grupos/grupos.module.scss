@@ -18,16 +18,58 @@
         width: 80%;
 
         p {
-            font-size: 1.3rem;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            line-height: 2em;
         }
     }
 
-    @media (max-width: 800px) {
+    .tabContainer {
+        width: 70%;
+        margin: 0 auto;
+        padding: 1em;
+
+        p:last-of-type {
+            letter-spacing: 1px;
+            padding: 2em 0;
+            font-weight: 700;
+            text-align: center;
+            background-color: white;
+        }
+    }
+
+    .compromisosContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em 1em;
+
+        .compromisos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+
+            .compromiso {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    }
+
+    @media (max-width: 870px) {
         .introText {
             p {
-                font-size: 1.3rem;
+                font-size: 1rem;
             }
+        }
+
+        .tabContainer {
+            width: 100%;
+        }
+
+        .compromisosContainer {
+            flex-direction: column;
         }
     }
 }

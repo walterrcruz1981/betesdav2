@@ -33,3 +33,35 @@ export const gruposDescription = [
         </>
     }
 ]
+
+export const compromisos = [
+    {
+        title: 'Comunidad',
+        description: 'Los que viven cerca de nuestra iglesia, ya sea que no Asistan nunca, lo hagan ocasionalmente, o aun regularmente'
+    },
+
+    {
+        title: 'Multitud',
+        description: 'Los que asisten a nuestra iglesia regularmente pero quizá no son Salvos.'
+    },
+
+    {
+        title: 'Congregtacíon',
+        description: 'Los que habiéndose comprometido con Cristo y con la membresía han pasado a formar parte de la Famila de la iglesia.'
+    },
+
+    {
+        title: 'Comprometidos',
+        description: 'Los miembros que tienen la determinación firme de crecer en las Disciplinas espirituales.'
+    },
+
+    {
+        title: 'Núcleo',
+        description: 'Los miembros que están activos en un ministerio y que Sirven en la iglesia.'
+    },
+
+    {
+        title: 'Comisionados',
+        description: 'Los miembros comprometidos a Salir de las cuatro paredes de la iglesia a anunciar el evangelio de Cristo a otras personas.'
+    },
+]

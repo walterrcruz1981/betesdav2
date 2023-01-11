@@ -4,6 +4,7 @@ import ConnectLinks from '../components/features/ConnectLinks'
 import styles from './contacto.module.scss'
 import { links } from './linksContent'
 import heroImage from '../../public/images/hero/contacto.webp'
+import WhatsUpBug from '../components/features/WhatsUpBug'
 
 export default function Contacto() {
     return (
@@ -20,15 +21,13 @@ export default function Contacto() {
             </div>
             <div className={styles.actionContainer}>
                 <div className={styles.actionCard}>
-                    <Link href={'/'}>Iglesias</Link>
+                    <Link href={'/iglesias'}>Iglesias</Link>
                 </div>
                 <div className={styles.actionCard}>
-                    <Link href={'/'}>Conocenos</Link>
-                </div>
-                <div className={styles.actionCard}>
-                    <Link href={'/'}>Quiero Ayudar</Link>
+                    <Link href={'/somos'}>Conocenos</Link>
                 </div>
             </div>
+            <WhatsUpBug url={'17148783335'} />
         </div>
     )
 }
