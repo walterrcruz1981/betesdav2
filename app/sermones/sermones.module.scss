@@ -106,3 +106,15 @@
 
     }
 }
+
+.errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
+}

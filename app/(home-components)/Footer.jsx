@@ -12,7 +12,7 @@ function Footer() {
             <div className={styles.footerLogo}>
                 <Image src={logo} width={75} height={75} alt='footer logo' />
             </div>
-            <Links />
+            <div className={styles.linksContainer}><Links /></div>
             <div className={styles.socialLinks}>
                 <ConnectLinks links={socialLinks} />
             </div>

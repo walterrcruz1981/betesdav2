@@ -4,7 +4,7 @@
     padding: 0 1em;
 
     .cardsContainer {
-        margin: 1em 0;
+        margin: 3em 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1em;
@@ -13,21 +13,30 @@
 
 //slideshoow
 .slide {
+    border-radius: 10px;
+    position: relative;
     height: 45em;
-    background-color: red;
-    border-radius: 20px;
-    min-width: 300px;
 
-    button {
-        transform: translate(150%, 500px);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    @media(max-width: 900px) {
-        height: 20em;
+    button {
+        position: absolute;
+        bottom: 12%;
+        left: 15%;
+        color: white;
+        outline: 1px solid white;
 
-        button {
-            transform: translate(-5em, 150px);
+        &:hover {
+            outline: 1px solid rgb(114, 114, 228);
         }
+    }
+
+    @media(max-width: 870px) {
+        height: 25em;
     }
 }
 
@@ -37,15 +46,16 @@
     overflow: hidden;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.534);
+    color: black;
 
     img {
         width: 100%;
         object-fit: cover;
-
+        filter: contrast(1.5);
     }
 
     .textContent {
-        background-color: rgba(255, 255, 255, 0.678);
+        background-color: rgba(255, 255, 255, 0.842);
         padding: 2em 3em;
         position: absolute;
         bottom: 10%;
@@ -55,17 +65,18 @@
     @media(max-width: 900px) {
         height: 13em;
 
+        img {
+            height: 100%;
+        }
+
+        .textContent {
+            left: 9%;
+            padding: 1em 2em;
+        }
     }
 
 }
 
-//links
-
-.links {
-    display: flex;
-    gap: 1em;
-    align-items: center;
-}
 
 //navbar
 
@@ -75,21 +86,75 @@
     padding: 0 1em;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: space-between;
+    position: relative;
+    z-index: 9999;
+    color: rgb(62, 179, 233);
+    letter-spacing: 1px;
 
-    a {
-        color: rgb(116, 170, 219);
-        font-weight: 700;
-        letter-spacing: 3px;
-    }
-
-    .navLogo {
-        position: relative;
+    .logo {
+        cursor: pointer;
+        z-index: 10002;
 
         img {
             object-fit: contain;
         }
     }
+
+    .navLinks {
+        display: flex;
+        gap: 1.5em;
+        font-weight: 700;
+    }
+
+    .mobileNav {
+        overflow: hidden;
+
+        .hamburger {
+            z-index: 99;
+            text-align: left;
+            font-size: 2rem;
+            color: blue;
+            position: fixed;
+            top: .5em;
+            right: 1em;
+            cursor: pointer;
+        }
+
+        .menuLinks {
+            display: flex;
+            align-items: flex-end;
+            padding-top: 5em;
+            padding-right: 2em;
+            position: fixed;
+            flex-direction: column;
+            gap: 2em;
+            background-color: #f8f8f8ed;
+            inset: 0 0 0 0;
+            font-weight: 700;
+            font-size: 24px;
+
+            a {
+                text-align: left;
+            }
+        }
+    }
+
+
+    @media (min-width: 800px) {
+        .mobileNav {
+            display: none;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .navLinks {
+            display: none;
+        }
+    }
+
+
 }
 
 //footer
@@ -107,6 +172,9 @@
     a {
         font-weight: 700;
         letter-spacing: 2px;
+        font-size: .9rem;
+        margin: 0 1em;
+
     }
 
     .footerLogo {
@@ -118,6 +186,12 @@
 
         a {
             font-size: 10px;
+        }
+    }
+
+    @media (max-width: 870px) {
+        a {
+            font-size: .6rem;
         }
     }
 }

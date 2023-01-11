@@ -30,7 +30,7 @@ export const cardContent = [
     {
         title: 'Ministerios',
         subTitle: 'Que hacen nuestros ministerios',
-        buttonText: 'Mas incormación',
+        buttonText: 'Mas información',
         buttonLink: '/ministerios',
         image: ministeriosImage
     },
