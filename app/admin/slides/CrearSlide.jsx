@@ -6,9 +6,15 @@ import { useState } from 'react'
 import styles from './slides.module.scss'
 import { v4 as uuidv4 } from 'uuid';
 
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
 export default function CrearSlide() {
     const cdn = 'https://adhlhwswdffizzjqdhoo.supabase.co/storage/v1/object/public/betesda-images/'
-    const supabase = createClient('https://adhlhwswdffizzjqdhoo.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkaGxod3N3ZGZmaXp6anFkaG9vIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzM0NjE2NTgsImV4cCI6MTk4OTAzNzY1OH0.2z4_U1vh0Bbvw7W0ZComWp5B4f6-fds2KwPhOkpZXoY')
+    const supabase = createClient(
+        supabaseUrl,
+        supabaseAnonKey
+    )
     const avatar = 'https://images.unsplash.com/photo-1673031288723-f198cd527b97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80'
     const [slide, setSlide] = useState({ buttonText: '', buttonUrl: '' })
     const [previewImage, setPreviewImage] = useState('')
