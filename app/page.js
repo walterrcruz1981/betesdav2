@@ -6,9 +6,8 @@ import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-
-export default async function HomePage() {
+export const revalidate = 60;
+async function getData() {
     const supabase = createClient(
         supabaseUrl,
         supabaseAnonKey
@@ -16,6 +15,14 @@ export default async function HomePage() {
     const { data, error } = await supabase
         .from('home-slides')
         .select()
+        .order('created_at', { ascending: false })
+    return data
+}
+
+export default async function HomePage() {
+
+    const data = await getData()
+
     const [misiones, planPeace, conectate, ministerios, conocenos] = cardContent
     return (
         <div className={styles.homeContainer}>
