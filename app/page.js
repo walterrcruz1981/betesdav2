@@ -6,7 +6,7 @@ import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-export const revalidate = 3600;
+export const revalidate = 60;
 async function getData() {
     const supabase = createClient(
         supabaseUrl,
