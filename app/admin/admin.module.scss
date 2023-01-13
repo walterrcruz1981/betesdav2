@@ -1,0 +1,50 @@
+.layoutContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .userInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 2em 0;
+        gap: 1em;
+
+        .actionContainer {
+            display: flex;
+            gap: 1em;
+
+            a {
+                outline: 1px solid rgb(81, 222, 247);
+                padding: 1em 2em;
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+
+            button {
+                outline: 1px solid rgb(81, 222, 247);
+                padding: 1em 2em;
+            }
+        }
+    }
+}
+
+.restrictedSite {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    color: red;
+    font-size: 2rem;
+
+    button {
+        padding: 1em 2em;
+        background-color: white;
+        border: none;
+    }
+}

@@ -17,6 +17,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'dih6tqxrn8ffv.cloudfront.net'
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'adhlhwswdffizzjqdhoo.supabase.co'
       }
     ]
   }

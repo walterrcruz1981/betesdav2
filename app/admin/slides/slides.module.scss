@@ -1,0 +1,49 @@
+.slidesContainer {
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin: 2em;
+
+        button {
+            width: 25%;
+            padding: 1em;
+        }
+
+        input {
+            margin: 0 1em;
+            padding: 1em
+        }
+    }
+
+    .preview {
+        width: 100%;
+        position: relative;
+
+        img {
+            z-index: -1;
+            object-fit: contain;
+            outline: 1px solid white;
+        }
+
+        h4 {
+            position: absolute;
+            bottom: 4%;
+            left: 5%;
+            z-index: 4;
+            padding: 1em 2em;
+            background-color: white;
+        }
+
+        h3 {
+            position: absolute;
+            top: 10px;
+            left: 5%;
+            z-index: 4;
+            padding: 1em 2em;
+            background-color: white;
+            color: rgb(86, 86, 218);
+            text-decoration: underline;
+        }
+    }
+}

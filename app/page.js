@@ -2,13 +2,24 @@ import styles from './(home-components)/home.module.scss'
 import SlideShow from './(home-components)/SlideShow'
 import Card from './(home-components)/Card'
 import { cardContent } from './(home-components)/homePageContent'
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 
-export default function HomePage() {
+export default async function HomePage() {
+    const supabase = createClient(
+        supabaseUrl,
+        supabaseAnonKey
+    )
+    const { data, error } = await supabase
+        .from('home-slides')
+        .select()
     const [misiones, planPeace, conectate, ministerios, conocenos] = cardContent
     return (
         <div className={styles.homeContainer}>
-            <SlideShow />
+            <SlideShow content={data} />
             <div className={styles.cardsContainer}>
                 <Card content={misiones} />
                 <Card content={planPeace} />
