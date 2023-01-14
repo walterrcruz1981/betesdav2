@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import Link from 'next/link'
-import { MyImage } from '../../variables'
 import styles from './cards.module.scss'
 
 function EventCard({ content }) {
@@ -7,13 +7,9 @@ function EventCard({ content }) {
 
     return (
         <Link href={`/eventos/${content.id}`}>
-            <div className={styles.eventCard + ' flex-center-column'}>
-
-                <div className={styles.imageContainer}>
-                    {MyImage(content.imageUrl || defaultImage)}
-                </div>
-                <div className={styles.title}>{content.title}</div>
-
+            <div className={styles.eventCard}>
+                <Image src={content.image || defaultImage} width={300} height={300} alt='event card image' />
+                <p>{content.title}</p>
                 <p className={styles.description}>{content.location}</p>
             </div>
         </Link>

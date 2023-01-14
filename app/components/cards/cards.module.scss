@@ -1,25 +1,24 @@
 //Event Card
 .eventCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     overflow: hidden;
     border-radius: .4em;
-    min-height: 28em;
     background-color: rgb(255, 255, 255);
     color: #103a52;
     outline: 1px solid black;
 
-    .imageContainer {
-        position: relative;
-        min-height: 28em;
+    img {
+        height: 15em;
         width: 100%;
-        margin-bottom: 1em;
-
-        img {
-            height: 15em;
-            z-index: 1;
-            opacity: 1;
-        }
     }
+
+    p {
+        padding: .4em 0;
+    }
+
 }
 
 //LinkCard

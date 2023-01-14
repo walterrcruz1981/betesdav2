@@ -1,0 +1,165 @@
+.eventosContainer {
+    max-width: 1600px;
+    text-align: center;
+    margin: 2em auto;
+
+    .hero {
+        position: relative;
+        background-color: rgba(35, 127, 202, 0.384);
+        margin-bottom: 4em;
+        overflow: hidden;
+        height: 37em;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 0;
+            z-index: -1;
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 5%;
+            left: 15%;
+            font-size: 5vw;
+            color: white;
+        }
+
+    }
+
+    .eventsGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1em;
+        margin: 0 .5em;
+    }
+
+    @media (max-width: 870px) {
+        .hero {
+            height: 20em;
+
+            h1 {
+                font-size: 10vw;
+            }
+        }
+
+    }
+}
+
+//events description component
+.eventDescription {
+    text-align: center;
+    margin-bottom: 2em;
+    min-width: 500px;
+
+    .hero {
+        height: 37em;
+        position: relative;
+        width: 100%;
+        background-color: rgba(26, 78, 219, 0.705);
+        margin-bottom: 2em;
+        color: white;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 5%;
+            left: 15%;
+            font-size: 5vw;
+        }
+
+    }
+
+    .descriptionContainer {
+        display: flex;
+        padding: 5%;
+        width: 100%;
+
+        .info {
+            width: 30%;
+            text-align: left;
+            padding-right: 2em;
+
+            span {
+                font-weight: 400;
+                padding: 1em;
+                line-height: 40px;
+            }
+
+            .addToCalendarButton {
+                padding: .2em 2em;
+                width: 100%;
+                outline: 1px solid black;
+                border-radius: 3px;
+                font-size: 1.4rem;
+                font-weight: 700;
+                background-color: rgb(127, 163, 163);
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(115, 146, 146);
+                }
+            }
+
+        }
+
+        .description {
+            width: 70%;
+            letter-spacing: 1px;
+            line-height: 30px;
+            padding: 1em;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: 0 0;
+            }
+        }
+
+    }
+
+    a {
+        padding: 1.2em 2.3em;
+        outline: 1px solid rgb(58, 218, 191);
+    }
+
+    @media (max-width: 870px) {
+        .hero {
+            height: 18em;
+        }
+
+        .descriptionContainer {
+            flex-direction: column;
+            padding: 1em;
+
+            .info {
+                width: 100%;
+            }
+
+            .description {
+                width: 100%;
+                margin-left: 0;
+
+                img {
+                    height: 15em;
+                }
+            }
+        }
+    }
+}
