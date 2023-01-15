@@ -4,7 +4,7 @@ import EventCard from '../components/cards/EventCard'
 import Image from 'next/image';
 import { supabase } from '../utils/supabaseClient';
 import heroImage from '../../public/images/hero/eventos.jpg'
-
+export const revalidate = 60;
 async function getData() {
     const { data } = await supabase.from('events').select()
     return data

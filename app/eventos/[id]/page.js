@@ -4,7 +4,7 @@ import Image from "next/image"
 import AddToCalender from "./AddToCalendar";
 import { supabase } from "../../utils/supabaseClient";
 import { formatDate, standarTime } from "../../utils/myFunctions";
-
+export const revalidate = 60;
 async function getData() {
     const { data } = await supabase.from('events').select()
     return data
