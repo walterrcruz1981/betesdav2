@@ -1,21 +1,15 @@
 'use client'
 
-import { createClient } from '@supabase/supabase-js'
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from './slides.module.scss'
 import { v4 as uuidv4 } from 'uuid';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+import { supabase } from '../../utils/supabaseClient'
 
 export default function CrearSlide() {
-    const cdn = 'https://adhlhwswdffizzjqdhoo.supabase.co/storage/v1/object/public/betesda-images/'
-    const supabase = createClient(
-        supabaseUrl,
-        supabaseAnonKey
-    )
+
     const avatar = 'https://images.unsplash.com/photo-1673031288723-f198cd527b97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80'
+
     const [slide, setSlide] = useState({ buttonText: '', buttonUrl: '' })
     const [previewImage, setPreviewImage] = useState('')
     const [image, setImage] = useState('')
@@ -36,7 +30,6 @@ export default function CrearSlide() {
         setImage(file)
     }
 
-
     async function handleSubmit(e) {
         e.preventDefault()
         const imageUrl = uuidv4() + image.name;
@@ -51,16 +44,16 @@ export default function CrearSlide() {
 
         } catch (error) {
             console.log(error);
-            alert('erro  creando  slide')
+            alert('error  creando  slide')
         }
         try {
             const { error } = await supabase
                 .from('home-slides')
-                .insert({ image: cdn + imageUrl, url: slide.buttonUrl, buttonText: slide.buttonText })
+                .insert({ image: imageUrl, url: slide.buttonUrl, buttonText: slide.buttonText })
 
         } catch (error) {
             console.log(error)
-            alert('erro  creando  slide')
+            alert('error  creando  slide')
         }
         setPreviewImage('')
         setSlide({ buttonText: '', buttonUrl: '' })

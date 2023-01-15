@@ -11,8 +11,8 @@
     outline: 1px solid black;
 
     img {
-        height: 15em;
         width: 100%;
+        object-fit: cover;
     }
 
     p {

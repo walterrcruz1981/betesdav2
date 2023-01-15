@@ -3,7 +3,7 @@ import iglesiasImage from '../../public/images/hero/iglesias.jpg'
 import planPeaceImage from '../../public/images/peaceImages/peace-banner.jpg'
 import conectateImage from '../../public/images/hero/conectate.png'
 import ministeriosImage from '../../public/images/hero/ministerios.png'
-import somosImage from '../../public/images/hero/somos.webp'
+import eventosImage from '../../public/images/hero/eventos.jpg'
 
 export const cardContent = [
     {
@@ -35,11 +35,11 @@ export const cardContent = [
         image: ministeriosImage
     },
     {
-        title: 'Conocenos',
-        subTitle: 'Quien somos y que creemos',
-        buttonText: 'Mas información',
-        buttonLink: '/somos',
-        image: somosImage
+        title: 'Eventos',
+        subTitle: 'Que estamos planeando...',
+        buttonText: 'Ver Eventos',
+        buttonLink: '/eventos',
+        image: eventosImage
     },
 
 ]

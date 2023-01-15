@@ -2,5 +2,22 @@
     display: flex;
     flex-direction: column;
     max-width: 800px;
+    gap: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
 
+    input {
+        margin-left: 1em;
+        padding: .5em 1em;
+        width: 40%;
+    }
+
+    button {
+        padding: .8em 1.4em;
+    }
+
+    button:last-of-type {
+        background-color: rgb(58, 248, 169);
+        color: black;
+    }
 }

@@ -2,16 +2,10 @@ import styles from './(home-components)/home.module.scss'
 import SlideShow from './(home-components)/SlideShow'
 import Card from './(home-components)/Card'
 import { cardContent } from './(home-components)/homePageContent'
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from './utils/supabaseClient'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 export const revalidate = 60;
 async function getData() {
-    const supabase = createClient(
-        supabaseUrl,
-        supabaseAnonKey
-    )
     const { data, error } = await supabase
         .from('home-slides')
         .select()

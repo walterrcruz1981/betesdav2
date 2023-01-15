@@ -6,6 +6,7 @@ import Link from 'next/link'
 import pastor from '../../public/images/pastores/pastorRonald.webp'
 
 export default function RootLayout({ children }) {
+
   return (
     <div className={styles.somosContainer}>
       <div className={styles.hero}>
