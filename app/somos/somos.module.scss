@@ -1,5 +1,4 @@
 .somosContainer {
-    min-height: 80vh;
 
     .main {
         max-width: 1200px;
@@ -12,24 +11,26 @@
 
     .headerLinks {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 1em;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.2em;
         text-align: center;
         padding: 3em 0;
         border-bottom: 1px solid black;
 
         img {
             object-fit: cover;
-            border-radius: .6em;
+            border-radius: .4em;
             background-color: rgb(0, 0, 0);
             box-shadow: 2px 2px 5px black;
+            object-position: 0 0;
+
+            &:hover {
+                transform: scale(1.007);
+                transition: transform 600ms ease-in-out
+            }
         }
 
-        .link {
-
-            a {
-                font-size: 4rem;
-            }
+        a {
 
             p {
                 font-size: 1rem;
@@ -37,7 +38,7 @@
             }
 
             &:hover {
-                color: rgb(63, 167, 228);
+                color: rgba(76, 138, 173, 0.658);
             }
         }
     }
