@@ -8,8 +8,9 @@ function Suggestions() {
             <h3>Sugerencias</h3>
             <div className={styles.linksContainer}>
                 <Link href={'/ministerios/betesda-media'}>Media</Link>
-                <Link href={'/somos/pastorronald'}>Pastor Ronald</Link>
-                <Link href={'/conectate/clases'}>Clases</Link>
+                <Link href={'/conectate'}>Conectate</Link>
+                <Link href={'/pastorronald'}>Pastor Ronald</Link>
+                <Link href={'/somos'}>Conocenos</Link>
                 <Link href={'/conectate/grupos'}>Grupos Pequeños</Link>
             </div>
         </div>

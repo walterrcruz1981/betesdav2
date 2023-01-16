@@ -38,16 +38,14 @@
         padding: 2em;
         font-size: large;
 
-        .innerImage {
-            position: relative;
+        img {
             float: left;
+            object-fit: contain;
             padding: 1em;
         }
 
-        .innerImage2 {
-            position: relative;
+        img:last-of-type {
             float: right;
-            padding: 1em;
         }
     }
 

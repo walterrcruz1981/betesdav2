@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import styles from './home.module.scss'
 import { menuLinks } from './menuLinks'
 function MobileMenu() {

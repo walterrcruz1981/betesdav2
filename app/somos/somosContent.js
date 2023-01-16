@@ -1,10 +1,17 @@
 import { HiOutlineScale, HiOutlineGlobeAmericas, HiOutlineShieldCheck, HiOutlineDocumentText } from 'react-icons/hi2'
+import propositoImage from '../../public/images/somos/proposito.jpg'
+import valoresImage from '../../public/images/somos/valores.jpg'
+import declaracionImage from '../../public/images/somos/declaracion.jpg'
+import suenoImage from '../../public/images/somos/sueno.jpg'
+
+
 
 export const somos = [
     {
         title: 'Proposito',
         slug: 'proposito',
         icon: <HiOutlineGlobeAmericas />,
+        image: propositoImage,
         item: [
             {
                 title: 'Misión',
@@ -37,6 +44,7 @@ export const somos = [
         title: 'Valores',
         slug: 'valores',
         icon: <HiOutlineScale />,
+        image: valoresImage,
         item: [
             {
                 title: 'Escrituras',
@@ -190,6 +198,7 @@ export const somos = [
         title: 'Declaracion',
         slug: 'declaracion',
         icon: <HiOutlineShieldCheck />,
+        image: declaracionImage,
         item: [
             {
                 title: 'I. LAS ESCRITURAS',
@@ -349,6 +358,7 @@ export const somos = [
         title: 'Nuestro Sueño',
         slug: 'sueno',
         icon: <HiOutlineDocumentText />,
+        image: suenoImage,
         item: [
             {
                 title: 'Misión',

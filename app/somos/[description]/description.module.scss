@@ -1,5 +1,17 @@
 .descriptionContainer {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2em 1em;
+
+    .hero {
+        background-color: black;
+        margin-bottom: 1em;
+
+        img {
+            width: 100%;
+            height: 37em;
+        }
+    }
 
     .item {
         padding: 1em 0;
@@ -14,5 +26,35 @@
             padding-left: 10px;
         }
 
+    }
+
+    .suggestions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1em;
+        margin-top: 2em;
+
+        a {
+            border-radius: 10px;
+            overflow: hidden;
+            outline: 1px solid rgb(106, 144, 214);
+
+            img {
+                width: 100%;
+            }
+
+            h4 {
+                padding: .4em 1em;
+            }
+        }
+    }
+
+    @media(max-width: 870px) {
+        .hero {
+            img {
+                height: 25em;
+            }
+
+        }
     }
 }
